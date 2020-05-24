@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">    
+    </div>
+    <script>
+        var d = new Date();
+        var currentYear = d.getFullYear();
+        var i = 0;
+        do {
+            i++;
+            if(i > 1) {
+                alert('Enter your age again');
+            }
+            var value = prompt('Please enter your birth year', '');
+        }while(value > currentYear);
+
+        document.getElementById('demo').innerHTML = 'Your age is ' + (currentYear - value);
+        
+    </script>
+</body>
+</html>

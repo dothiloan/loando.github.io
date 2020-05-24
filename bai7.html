@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="margin: 0">
+    <div id="demo" style="width: 100%; height: 100vh;">
+        <select name="" id="colors">
+            <option value="">Please choose your color</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="brown">Brown</option>
+            <option value="lavender">Lavender</option>
+        </select>
+        <button onclick="changeColor()">Submit</button>
+    </div>
+    <script>
+       
+        function changeColor(){
+            var e = document.getElementById("colors");
+            var myColor = e.options[e.selectedIndex].value;
+            document.getElementById("demo").style.backgroundColor = myColor;
+        }
+
+        // function changeGreen(){
+        //     document.getElementById("demo").style.backgroundColor = "green";
+        // }
+        
+    </script>
+</body>
+</html>

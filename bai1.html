@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Chao ban: <strong id="name"></strong></p>
+        <p>Tuoi cua ban la: <span id="age" style="text-decoration: underline;"></span></p>
+    </div>
+    <script>
+        var name = prompt('Please enter your name');
+        var age = prompt('Please enter your age');
+        if (name != null && age != null) {
+            document.getElementById("name").innerHTML=name;
+            document.getElementById("age").innerHTML= age;
+        }
+    </script>
+</body>
+</html>

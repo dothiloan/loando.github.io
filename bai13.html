@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="startCount()">Start</button>
+    <button onclick="stopCount()">Stop</button>
+    <p id="demo">0:0:0</p>
+    <script>
+        var myClock;
+        function startCount() {
+            var hour = 00;
+            var minute = 00;
+            var second = 00;
+            myClock = setInterval(function(){
+                second ++;
+                if(second == 60){
+                    second = 1;
+                    minute++;
+                    if(minute == 59) {
+                        hour++;
+                    }
+                }
+                document.getElementById('demo').innerHTML = hour + ":" + minute + ":" + second;
+            }, 1000);
+        }
+
+        function stopCount() {
+            clearInterval(myClock);
+        }
+        
+    </script>
+</body>
+</html>

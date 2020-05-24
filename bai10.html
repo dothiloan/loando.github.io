@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p style="display: inline-block;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, est nihil porro eligendi reiciendis consectetur? Accusamus, cupiditate? Nemo assumenda qui, maxime nesciunt, voluptates ab porro fuga, consequatur rerum blanditiis aut?
+
+        <span id="textarea" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, placeat omnis, explicabo facere totam ipsa aspernatur nemo nostrum eum ipsum possimus in, est assumenda accusamus dicta rem sint. Aliquam, tempora.</div>
+        </span>
+
+    </p>
+
+    <a id="seeMore" onclick="toggleSeeMore()" href="javascript:void(0);">See More</a>
+    
+    <script>
+        function toggleSeeMore() {
+    if(document.getElementById("textarea").style.display == 'none') {
+        document.getElementById("textarea").style.display = 'inline';
+        document.getElementById("seeMore").innerHTML = 'See less';
+    }
+    else {
+        document.getElementById("textarea").style.display = 'none';
+        document.getElementById("seeMore").innerHTML = 'See more';        
+    }
+}
+
+    </script>
+</body>
+</html>

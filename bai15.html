@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="number1" placeholder="Enter number 1">
+    <select name="" id="calc">
+        <option value="">Enter your caculation</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="x">x</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" id="number2" placeholder="Enter number 2">
+    <button onclick="startCalc()">Caculate</button>
+    <p id="result">Result: </p>
+    <script>
+        function startCalc() {
+            var number1 = document.getElementById('number1').value;
+            var e = document.getElementById("calc");
+            var calc = e.options[e.selectedIndex].value;
+            var number2 = document.getElementById('number2').value;
+            var result;
+            switch (calc) {
+                case '+' :
+                    result = Number(number1) + Number(number2);
+                    break;
+                case '-' :
+                    result = Number(number1) - Number(number2);
+                    break;
+                case 'x' :
+                    result = Number(number1) * Number(number2);
+                    break;
+                case '/' :
+                    result = Number(number1) / Number(number2);
+                    break;
+            }
+            document.getElementById("result").innerHTML = 'Result: ' + result;
+        }
+    </script>
+</body>
+</html>

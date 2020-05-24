@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="number" placeholder="Enter number">
+    <input type="text" id="task" placeholder="Enter your work">
+    <button onclick="addToDoList()">Submit</button>
+    <h4>To do list</h4>
+    <script>
+        function addToDoList() {
+            var number = document.getElementById('number').value;
+            var task = document.getElementById('task').value;
+            var newTask = number + " - " + task;
+            var myValue = document.createElement("P");
+            myValue.innerHTML = newTask;
+            document.body.appendChild(myValue);
+        }
+    </script>
+</body>
+</html>
